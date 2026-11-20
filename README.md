@@ -24,6 +24,6 @@ Use um projeto Cloudflare Pages, não Workers Builds, e configure:
 - Build command: `npm run build`
 - Build output directory: `dist`
 
-Em **Settings > Functions**, ative a compatibility flag `nodejs_compat` e configure uma compatibility date atual. A flag é necessária pelo SDK MCP usado pelo endpoint. O arquivo `functions/mcp.js` será publicado em `/mcp`.
+O `wrangler.jsonc` mantém a saída, a compatibility date e a flag `nodejs_compat` no projeto. Use o build system V2 do Pages; com esse arquivo, ele é a fonte de verdade dessas configurações. A flag é necessária pelo SDK MCP usado pelo endpoint. O arquivo `functions/mcp.js` será publicado em `/mcp`.
 
 Não configure Deploy command; Pages publica o conteúdo de `dist` automaticamente.

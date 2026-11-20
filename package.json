@@ -9,5 +9,8 @@
   "dependencies": {
     "@modelcontextprotocol/server": "2.4.0",
     "agents": "0.34.0"
+  },
+  "devDependencies": {
+    "wrangler": "4.166.0"
   }
 }
