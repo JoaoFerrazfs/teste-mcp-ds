@@ -4,15 +4,10 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.js",
-    "dev": "npm run build && wrangler pages dev dist",
-    "deploy:pages": "wrangler pages deploy dist --project-name=teste-mcp-ds",
     "test": "node --test"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "2.4.0",
     "agents": "0.34.0"
-  },
-  "devDependencies": {
-    "wrangler": "4.166.0"
   }
 }

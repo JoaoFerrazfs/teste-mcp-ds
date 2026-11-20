@@ -2,17 +2,15 @@
 
 Projeto mínimo em JavaScript: página estática e servidor MCP stateless para Cloudflare Pages.
 
-## Rodar localmente
+## Build e testes
 
 ```sh
 npm install
-npm run dev
+npm run build
+npm test
 ```
 
-- Página: `http://localhost:8788`
-- MCP: `http://localhost:8788/mcp`
-
-Execute `npm test` para verificar o fluxo MCP.
+O build gera os arquivos estáticos em `dist/`.
 
 ## Servidor MCP
 
@@ -20,6 +18,12 @@ O endpoint usa Streamable HTTP e expõe uma ferramenta, `boas_vindas`, que respo
 
 ## Cloudflare Pages
 
-O comando `npm run build` copia os arquivos estáticos para `dist`. No projeto Pages, use `npm run build` como build command e `dist` como diretório de saída. `wrangler.jsonc` ativa `nodejs_compat`, e `functions/mcp.js` será publicada em `/mcp`.
+Use um projeto Cloudflare Pages, não Workers Builds, e configure:
 
-Para deploy manual, rode `npm run build && npm run deploy:pages` (projeto `teste-mcp-ds`). Se o painel exigir Deploy command com `npx wrangler deploy`, ele está configurando um Worker; Pages usa `wrangler pages deploy`.
+- Root directory: `/`
+- Build command: `npm run build`
+- Build output directory: `dist`
+
+Em **Settings > Functions**, ative a compatibility flag `nodejs_compat` e configure uma compatibility date atual. A flag é necessária pelo SDK MCP usado pelo endpoint. O arquivo `functions/mcp.js` será publicado em `/mcp`.
+
+Não configure Deploy command; Pages publica o conteúdo de `dist` automaticamente.
