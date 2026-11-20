@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#158110" />
+    <title>Backyard — Design System</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Backyard Design System">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span>
+          <strong>Backyard</strong>
+          <small>Design System · Leroy Merlin</small>
+        </span>
+      </a>
+      <span class="preview-label">Cloudflare Pages preview</span>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Design system · versão mínima</p>
+          <h1>Interfaces consistentes, do início ao fim.</h1>
+          <p class="intro">
+            Uma amostra estática dos tokens e componentes visuais do Backyard.
+          </p>
+          <div class="actions">
+            <a class="button button-primary" href="#componentes">
+              Ver componentes
+            </a>
+            <a class="button button-secondary" href="#tokens">Ver tokens</a>
+          </div>
+        </div>
+        <aside class="sample-card" aria-label="Exemplo de card">
+          <span class="status"><span></span> Projeto ativo</span>
+          <strong>Seu próximo projeto começa aqui.</strong>
+          <span class="sample-line"></span>
+          <span class="sample-line sample-line-short"></span>
+          <a class="text-link" href="#componentes">Continuar <span aria-hidden="true">→</span></a>
+        </aside>
+      </section>
+
+      <section id="tokens" class="section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Fundação</p>
+            <h2>Tokens de cor</h2>
+          </div>
+          <p>Paleta resumida baseada nos tokens do pacote de estilos.</p>
+        </div>
+        <div class="token-grid">
+          <div class="token"><span class="swatch swatch-primary"></span><span><strong>Primary</strong><small>#158110</small></span></div>
+          <div class="token"><span class="swatch swatch-secondary"></span><span><strong>Secondary</strong><small>#035F64</small></span></div>
+          <div class="token"><span class="swatch swatch-critical"></span><span><strong>Critical</strong><small>#B42A27</small></span></div>
+          <div class="token"><span class="swatch swatch-neutral"></span><span><strong>Neutral</strong><small>#222020</small></span></div>
+        </div>
+      </section>
+
+      <section id="componentes" class="section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Componentes</p>
+            <h2>Elementos básicos</h2>
+          </div>
+          <p>Exemplos visuais sem dependências ou etapa de build.</p>
+        </div>
+        <div class="component-grid">
+          <article class="panel">
+            <p class="component-name">Button</p>
+            <div class="button-row">
+              <button class="button button-primary" type="button">Primary</button>
+              <button class="button button-secondary" type="button">Secondary</button>
+            </div>
+          </article>
+          <article class="panel">
+            <p class="component-name">Text field</p>
+            <label for="email">E-mail</label>
+            <input id="email" type="email" placeholder="voce@exemplo.com" />
+          </article>
+          <article class="panel">
+            <p class="component-name">Typography</p>
+            <h3>Olá, Backyard</h3>
+            <p class="body-copy">Tipografia simples, legível e responsiva.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Backyard · Leroy Merlin</span>
+      <span>Preview estática para Cloudflare Pages</span>
+    </footer>
+  </body>
+</html>
